@@ -1,7 +1,6 @@
 import streamlit as st 
 import cv2 
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 
@@ -152,15 +151,11 @@ def main():
           if img is not None:
             col1 , col2 = st.columns(2)
             col1.text('original Image')
-            plt.rcParams["figure.figsize"] = [7.00, 3.50]
-            plt.rcParams["figure.autolayout"] = True
-            fig, ax = plt.subplots()
-            img = ax.imshow(img, extent=[0, 300, 0, 300])
-            col1.pyplot(fig)
+            col1.image(img)
             col2.text('output')
 
             st.sidebar.header('Choose shape')
-            sidebar_col1 , sidebar_col2 = st.sidebar.columns(2)
+
 
             shape = st.sidebar.radio(
                  "Choose Shape" ,
