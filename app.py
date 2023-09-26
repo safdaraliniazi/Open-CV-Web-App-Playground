@@ -203,6 +203,8 @@ def main():
                  simple_thresholding()
              elif choice == 'Adaptive Thresholding':
                  adaptive_thresholding()
+             elif choice == "Otsu\'s Binarization":
+                 st.write('Hello This is in progress')
          elif task == 'Canny Edge Detection':
              canny_edge()
              
